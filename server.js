@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    var port = 1337;
+    var port = 8888;
     var server = {};
     var routes = {};
     // Load express module, a minimalist web framework
