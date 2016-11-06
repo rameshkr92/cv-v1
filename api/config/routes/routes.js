@@ -15,7 +15,8 @@
 // Express routes
         app.get('/', main.index);
         app.get('/usersapp', main.usersIndex);
-
+		// Contact Form
+        app.post('/contact/send/', main.sendMail);
 // For the Angular routes, a single route to serve partials must be included
         // Animation App Routing
         app.get('/partials/animate/:file', main.animatePartials);

@@ -1,9 +1,13 @@
 (function(){
     'use strict';
-    angular.module('AppPortfolio', ['ngAnimate', 'ngRoute', 'ngSanitize', 'ngTouch',
-        'duScroll', 'pcCompareToDirective', 'ui.bootstrap'])
-        .config(['$httpProvider', '$sceDelegateProvider', '$routeProvider',
-            function($httpProvider, $sceDelegateProvider, $routeProvider){
+    /*angular.module('AppPortfolio', ['ngAnimate', 'ngRoute', 'ngSanitize', 'ngTouch',
+    'duScroll', 'pcCompareToDirective', 'ui.bootstrap'])
+      .config(['$httpProvider', '$sceDelegateProvider', '$routeProvider',
+        function($httpProvider, $sceDelegateProvider, $routeProvider){*/
+		angular.module('AppPortfolio', ['ngAnimate', 'ngRoute', 'ngSanitize', 'ngTouch',
+    'duScroll', 'ui.bootstrap'])
+      .config(['$httpProvider', '$sceDelegateProvider', '$routeProvider','$locationProvider',
+        function($httpProvider, $sceDelegateProvider, $routeProvider,$locationProvider){
                 // HTTP interceptor to add token to req. Register interceptor via
                 // anonymous factory (don't need $q unless intercepting response
                 $httpProvider.interceptors.push(function($window){
@@ -21,7 +25,7 @@
                         }
                     };
                 });
-                // $locationProvider.html5Mode(true);
+                $locationProvider.html5Mode(true);
                 // Whitelist external URLs
                 $sceDelegateProvider.resourceUrlWhitelist([
                     // Same origin resource loads
@@ -93,7 +97,7 @@
                             redirectTo: '/'
                         });
             }])
-        .run(['$location', '$rootScope', '$window', 'AuthFactory',
+        /*.run(['$location', '$rootScope', '$window', 'AuthFactory',
             function($location, $rootScope, $window, AuthFactory){
                 var wls = $window.localStorage;
                 // console.log('app.js wls', wls);
@@ -128,5 +132,5 @@
                         }
                     }
                 });
-            }]);
+            }]);*/
 })();

@@ -1,38 +1,69 @@
 <!DOCTYPE html>
 <html lang="en" data-ng-app="AppPortfolio">
 <head>
-  <!--<base href="/">-->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="title" content="Ramesh Kumar Full Stack Web Developer" />
-  <meta name="description" content="Ramesh Kumar is a full stack web developer concentrating on the MEAN Stack, MongoDB Express AngularJS and NodeJS" />
-  <meta name="site_name" content="Ramesh Kumar" />
-  <link rel="icon" type="image/png" href="/img/favicon/favicon.ico" />
-  <link type="text/css" rel="stylesheet" href="/css/normalize.css" />
-  <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-  <link type="text/css" rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css" />
-  <link type="text/css" rel="stylesheet" href="/css/animate/animate.css" />
-  <link type="text/css" rel="stylesheet" href="/css/animate/animation.css" />
-  <link type="text/css" rel="stylesheet" href="/css/favLang/favLang.css" />
-  <link type="text/css" rel="stylesheet" href="/css/main/navbar.css" />
-  <link type="text/css" rel="stylesheet" href="/css/main/header.css" />
-  <link type="text/css" rel="stylesheet" href="/css/main/portfolio.css" />
-  <link type="text/css" rel="stylesheet" href="/css/main/skills.css" />
-  <link type="text/css" rel="stylesheet" href="/css/main/footer.css" />
-  <link type="text/css" rel="stylesheet" href="/css/testing/testing.css" />
-  <link type="text/css" rel="stylesheet" href="/css/weather/weather.css" />
-  <title><%= title %></title>
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <meta charset="utf-8">
+	<base href="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive Bootstrap Sility - vCard, CV & Resume HTML Template">
+    <meta name="keywords" content=" minimal html cv resume template,signature resume cv portfolio html template">
+    <meta name="author" content="Varun Sridharan [TechNoFreaky]"> 
+    <meta property="og:title" content="Sility - vCard, CV & Resume HTML Template"/>
+    <meta property="og:description" content="Responsive Bootstrap Sility - vCard, CV & Resume HTML Template" />
+    <meta property="og:url" content="http://www.example.com" />
+    <meta property="og:site_name" content="Sility - vCard"/>
+    <meta property="og:image" content="http://example.com/ogp.jpg" />
 
-<script type="text/javascript" src='/socket.io/socket.io.js'></script>
-<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <meta name="twitter:card" content="Summary">
+
+    <meta name="twitter:site" content="@SiteName">
+
+    <meta name="twitter:creator" content="@AuthorHandle">
+
+    <meta name="twitter:title" content="Article Title ">
+
+    <meta name="twitter:description" content="Page Description">
+
+    <meta name="twitter:image:src" content="Image URL">
+
+    <title>Ramesh Kumar</title>
+
+    <!-- Bootstrap -->
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Icons -->
+    <link href="/css/front/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Ionicons -->
+    <link href="/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet">
+    <!-- Owl Carousel -->
+    <link href="/css/front/owl.carousel.css" rel="stylesheet">
+    <link href="/css/front/owl.theme.default.css" rel="stylesheet">
+    <!-- Style.css -->
+    <link rel="alternate stylesheet" title="amber" type="text/css"  data-color="#FFC107" href="/css/front/color/amber.css"  />
+    <link rel="alternate stylesheet" title="black" type="text/css"  data-color="#374046" href="/css/front/color/black.css"  />
+    <link rel="alternate stylesheet" title="blue" type="text/css"  data-color="#2196F3" href="/css/front/color/blue.css"  />
+    <link rel="alternate stylesheet" title="blue_grey" type="text/css"  data-color="#607D8B" href="/css/front/color/blue_grey.css"  />
+    <link rel="alternate stylesheet" title="brown" type="text/css"  data-color="#795548" href="/css/front/color/brown.css"  />
+    <link rel="alternate stylesheet" title="cayan" type="text/css"  data-color="#00BCD4" href="/css/front/color/cayan.css"  />
+    <link rel=" stylesheet" title="deep_orange" type="text/css"  data-color="#FF5722" href="/css/front/color/deep_orange.css"  />
+    <link rel="alternate stylesheet" title="deep_purple" type="text/css"  data-color="#673AB7" href="/css/front/color/deep_purple.css"  />
+    <link rel="alternate stylesheet" title="green" type="text/css"  data-color="#4CAF50" href="/css/front/color/green.css"  />
+    <link rel="alternate stylesheet" title="grey" type="text/css"  data-color="#9E9E9E" href="/css/front/color/grey.css"  />
+    <link rel="alternate stylesheet" title="indigo" type="text/css"  data-color="#3F51B5" href="/css/front/color/indigo.css"  />
+    <link rel="alternate stylesheet" title="light_blue" type="text/css"  data-color="#03A9F4" href="/css/front/color/light_blue.css"  />
+    <link rel="alternate stylesheet" title="light_green" type="text/css"  data-color="#8BC34A" href="/css/front/color/light_green.css"  />
+    <link rel="alternate stylesheet" title="lime" type="text/css"  data-color="#CDDC39" href="/css/front/color/lime.css"  />
+    <link rel="alternate stylesheet" title="orange" type="text/css"  data-color="#FF9800" href="/css/front/color/orange.css"  />
+    <link rel="alternate stylesheet" title="pink" type="text/css"  data-color="#E91E63" href="/css/front/color/pink.css"  />
+    <link rel="alternate stylesheet" title="purple" type="text/css"  data-color="#9C27B0" href="/css/front/color/purple.css"  />
+    <link rel="alternate stylesheet" title="red" type="text/css"  data-color="#F44336" href="/css/front/color/red.css"  />
+    <link rel="alternate stylesheet" title="teal" type="text/css"  data-color="#009688" href="/css/front/color/teal.css"  />
+    <link rel="alternate stylesheet" title="yellow" type="text/css"  data-color="#FFEB3B" href="/css/front/color/yellow.css"  />
+	
+	<script type="text/javascript" src='/socket.io/socket.io.js'></script>
+<!--<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>-->
+<script src="js/front/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="/bower_components/angular-animate/angular-animate.min.js"></script>
@@ -42,40 +73,26 @@
 <script type="text/javascript" src="/bower_components/angular-scroll/angular-scroll.min.js"></script>
 <script type="text/javascript" src="/bower_components/angular-touch/angular-touch.min.js"></script>
 <script type="text/javascript" src="/js/app.js"></script>
-<script type="text/javascript" src="/js/directives/animate/animate.js"></script>
-<script type="text/javascript" src="/js/directives/favLang/favLang.js"></script>
+<!--<script type="text/javascript" src="/js/directives/animate/animate.js"></script>
+<script type="text/javascript" src="/js/directives/favLang/favLang.js"></script>-->
 <script type="text/javascript" src="/js/directives/main/main.js"></script>
-<script type="text/javascript" src="/js/directives/main/navbar.js"></script>
-<script type="text/javascript" src="/js/directives/shared/autoFocus.js"></script>
-<script type="text/javascript" src="/js/directives/shared/compare.js"></script>
-<script type="text/javascript" src="/js/directives/testing/test.js"></script>
-<script type="text/javascript" src="/js/directives/weather/weather.js"></script>
-<script type="text/javascript" src="/js/providers/animation.js"></script>
-<script type="text/javascript" src="/js/providers/authFactory.js"></script>
-<script type="text/javascript" src="/js/providers/detectDevice.js"></script>
-<script type="text/javascript" src="/js/providers/flashFactory.js"></script>
-<script type="text/javascript" src="/js/providers/modalService.js"></script>
-<script type="text/javascript" src="/js/providers/portfoliosService.js"></script>
-<script type="text/javascript" src="/js/providers/skillsService.js"></script>
-<script type="text/javascript" src="/js/providers/socketFactory.js"></script>
-<script type="text/javascript" src="/js/providers/weatherFactory.js"></script>
-<script type="text/javascript" src='/js/scripts/Highcharts-4.1.7/js/highcharts.js'></script>
-<script type="text/javascript" src="/js/scripts/mainJs.js"></script>
+<script type="text/javascript" src="/js/directives/main/header.js"></script>
+<script type="text/javascript" src="/js/directives/main/contact.js"></script>
 </head>
 <body>
-  <div class="container">
-    <!-- Load navbar display directive -->
-    <nav-bar-display></nav-bar-display>
-  </div>
-  <!-- ngView div -->
-  <div class="row">
-    <div class="container-fluid">
-      <div class="view-container">
-        <!-- autoscroll to have favorite language page loaded scrolled to top after -->
-        <!-- page navigating away and back -->
-        <div data-ng-view class="view-frame" data-autoscroll="true"></div>
-      </div>
-    </div>
-  </div>
+<!-- Header -->
+<!--<data-ng-include src="'partials/main/_header.html'"></data-ng-include>-->
+<header-display></header-display>
+<!-- end .header -->
+    <!-- Sections -->
+	<div data-ng-view class="view-frame" data-autoscroll="true"></div>
+    <!-- end .sections -->
+	<!-- Footer -->
+	<data-ng-include src="'partials/main/_footer.html'"></data-ng-include>
+	<!-- end .footer -->
+	<!-- jQuery -->
+    <!--<script src="/bower_components/jquery/dist/jquery.min.js"></script>-->
+	
+
 </body>
 </html>

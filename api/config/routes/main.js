@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-
+  var MainController = require('./../../controllers/main');
   // This is the express view that will be required. The rest is done by
   // Angular routing
   exports.index = function(req, res){
@@ -8,6 +8,11 @@
   };
   exports.usersIndex = function(req, res){
     res.render('usersIndex', {title: "User Dashboard"});
+  };
+  exports.sendMail = function(req, res){
+	MainController.sendMail(req, res, function(msg){
+      res.json(msg);
+    });
   };
 
   // For the Angular routes, a single route to serve partials must be included

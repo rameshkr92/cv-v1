@@ -1,6 +1,5 @@
 (function(){
   'use strict';
-
   angular.module('AppPortfolio')
     .directive('mainDisplay', [function(){
       return {

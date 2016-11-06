@@ -1,26 +1,30 @@
 (function(){
   'use strict';
-
   angular.module('AppPortfolio')
-    .directive('navBarDisplay', [function(){
+    .directive('headerDisplay', [function(){
       return {
-        controller: 'PortfolioNavBarController',
+        controller: 'HeaderController',
         scope: {},
         restrict: 'E',
-        templateUrl: 'partials/main/_navBar.html'
+        templateUrl: 'partials/main/_header.html'
       };
     }])
-    .controller('PortfolioNavBarController', ['$document', '$location',
-      '$scope', '$window', 'ModalService',
-        function($document, $location, $scope, $window, ModalService){
+    .controller('HeaderController', ['$scope','$location',
+        function($scope,$location){
           var duration = 1000;
           var el = '';
           var offset = 60;
-
           $scope.$on('locationChanged', function(){
             setCurrentPath();
           });
-
+		  $scope.SITE_TITLE = 'Ramesh Kumar';
+		  $scope.BASE_PATH = $location.$$absUrl;
+		  $scope.available_for_freelance = 'Available For Freelance';
+		  $scope.enter_to_search = 'Just Start Typing Text and Press Enter';
+		  $scope.facebook = 'Facebook';
+		  $scope.twitter = 'Twitter';
+		  $scope.linkedin = 'Linkedin';
+		  $scope.google_plus = 'Google+';
           $scope.about = 'About';
           $scope.about_fa = 'info';
           $scope.about_p0 = 'I enjoy solving the puzzle to find solutions ' +
@@ -47,6 +51,7 @@
           $scope.github = 'GitHub';
           $scope.github_fa = 'github-square';
           $scope.github_url = 'https://github.com/rameshkr92?tab=repositories';
+		  $scope.facebook_url = 'https://www.facebook.com/rameshsingh1992';
           $scope.home = 'Home';
           $scope.home_fa = 'home';
           $scope.home_url = '#/';
@@ -62,43 +67,5 @@
           $scope.unit = 'Unit';
           $scope.unit_fa = 'terminal';
           $scope.up_fa = 'chevron-circle-up';
-
-          $scope.scrollTo = function(elemId){
-            if(elemId === 'top'){
-              $document.scrollTopAnimated(0, duration);
-            } else {
-              el = angular.element(document.getElementById(elemId));
-              $document.scrollToElementAnimated(el, offset, duration);
-            }
-          };
-
-          $scope.showAbout = function(){
-            if(!$window.sessionStorage.getItem('visited')){
-              $window.sessionStorage.setItem('visited', true);
-            }
-            var modalDefaults = {
-              templateUrl: 'partials/main/_about.html'
-            };
-            var modalOptions = {
-              actionButtonText: 'Close',
-            };
-            ModalService.showModal(modalDefaults, modalOptions)
-              .then(function(){});
-          };
-
-          $scope.$on('showWelcome', function(event, args){
-            // console.log('PortfolioNavBarController.$on.showAbout event:', event);
-            // console.log('PortfolioNavBarController.$on.showAbout args:', args);
-            $scope.showAbout();
-          });
-
-          (function initController(){
-            setCurrentPath();
-          })();
-
-          // Private functions
-          function setCurrentPath(){
-            $scope.currentPath = $location.path();
-          }
         }]);
 })();
