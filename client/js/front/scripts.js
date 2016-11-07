@@ -141,7 +141,7 @@
 				itemSelector: '.item',
 				layoutMode: 'masonry'
 			});
-			horizontalSections();
+			// horizontalSections();
 		});
 		$('#portfolio-filters').on('click', 'button', function() {
 			var filterValue = $(this).attr('data-filter');
@@ -157,11 +157,11 @@
 					columnWidth: $blogContainer.find('.blog-grid-sizer')[0]
 				}
 			});
-			horizontalSections();
+			// horizontalSections();
 		});
 
 		/*==========  Horizontal Scroll  ==========*/
-		var hash = window.location.hash;
+		/*var hash = window.location.hash;
 		var url = 1;
 		var count = $('.sections-wrapper section').length;
 		if (location.hash) {
@@ -240,7 +240,7 @@
 			slide('mainNav', $(this));
 		});
 		$('a.forward, .section-nav a.backward, .main-nav a, .responsive-nav a, .available').smoothScroll();
-
+		*/
 		/*==========  Testimonial Slider  ==========*/
 		$('.testimonial-slider').owlCarousel({
 			items: 1,

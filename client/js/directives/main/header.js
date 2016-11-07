@@ -17,9 +17,11 @@
           $scope.$on('locationChanged', function(){
             setCurrentPath();
           });
-		  $scope.SITE_TITLE = 'Ramesh Kumar';
+
+          // alert($location.url($location.path()))
+		  $scope.SITE_TITLE = 'Ramesh';
 		  $scope.BASE_PATH = $location.$$absUrl;
-		  $scope.available_for_freelance = 'Available For Freelance';
+		  $scope.available_for_freelance = 'Contact Me';
 		  $scope.enter_to_search = 'Just Start Typing Text and Press Enter';
 		  $scope.facebook = 'Facebook';
 		  $scope.twitter = 'Twitter';
