@@ -40,7 +40,6 @@
                 'https://www.youtube.com/embed/BhA6q8JeB0M**',
                 'https://www.youtube.com/embed/P6nIq9NrGkc**'
                 ]);
-
             // Use the config method to setup angular routing, inject $routeProvider
             // to allow the update of a partial view
             $routeProvider

@@ -1,8 +1,8 @@
 (function(){
   'use strict';
   angular.module('AppPortfolio').controller('ContactController', ['$scope','$http', function($scope, $http){
-		
 		  $scope.sendMail = function(){
+		  	alert()
 		  var data = {
 			contactName : this.contactName,
 			contactEmail : this.contactEmail,

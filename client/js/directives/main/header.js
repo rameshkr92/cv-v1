@@ -9,15 +9,31 @@
         templateUrl: 'partials/main/_header.html'
       };
     }])
-    .controller('HeaderController', ['$scope','$location',
-        function($scope,$location){
+    .controller('HeaderController', ['$scope','$location','$http',
+        function($scope,$location,$http){
           var duration = 1000;
           var el = '';
           var offset = 60;
           $scope.$on('locationChanged', function(){
             setCurrentPath();
           });
+          $scope.getClass = function (path) {
+            return ($location.path().substr(0, path.length) === path) ? 'active' : '';
+          }
+          // alert(x)
+        /*$http.get('/download', data).
+          success(function(data, status, headers, config) {
+             var anchor = angular.element('<a/>');
+             anchor.attr({
+                 href: 'data:attachment/csv;charset=utf-8,' + encodeURI(data),
+                 target: '_blank',
+                 download: 'filename.csv'
+             })[0].click();
 
+          }).
+          error(function(data, status, headers, config) {
+            // handle error
+          });*/
           // alert($location.url($location.path()))
 		  $scope.SITE_TITLE = 'Ramesh';
 		  $scope.BASE_PATH = $location.$$absUrl;

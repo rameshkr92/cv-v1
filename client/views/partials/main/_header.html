@@ -137,7 +137,7 @@
             <a href="#/contact" class="available"><i class="ion-ios-email-outline"></i><span>{{available_for_freelance}}</span></a>
             <div class="right-icons">
                 <!--<a href="#" class="open-search header-open-search"><i class="md md-search"></i></a>-->
-                <a href="#" class="download"><i class="md md-file-download"></i></a>
+                <a href="/ramesh-kumar.doc" class="download"><i class="md md-file-download"></i></a>
                 <a href="#" class="share"><i class="md md-more-vert"></i></a>
             </div>
             <!-- end .right-icons -->
@@ -171,28 +171,28 @@
             <a href="#" class="responsive-menu-open">Menu <i class="fa fa-bars"></i></a>
             <nav class="main-nav">
                 <ul class="list-unstyled">
-                    <li class="nav-home active">
-                        <a href="#/">Home</a>
+                    <li data-ng-class="getClass('/home')">
+                        <a href="#/home">Home</a>
                     </li>
-                    <li class="nav-about">
+                    <li data-ng-class="getClass('/about')">
                         <a href="#/about">About</a>
                     </li>
-                    <li class="nav-skill">
+                    <li data-ng-class="getClass('/skills')">
                         <a href="#/skills">Skill</a>
                     </li>
-                    <li class="nav-experience">
+                    <li data-ng-class="getClass('/experience')">
                         <a href="#/experience">Experience</a>
                     </li>
-                    <li class="nav-education">
+                    <li data-ng-class="getClass('/education')">
                         <a href="#/education">Education</a>
                     </li>
-                    <li class="nav-work">
+                    <li data-ng-class="getClass('/work')">
                         <a href="#/work">Work</a>
                     </li>
-                    <li class="nav-blog">
+                    <li data-ng-class="getClass('/blog')">
                         <a href="#/blog">Blog</a>
                     </li>
-                    <li class="nav-contact">
+                    <li data-ng-class="getClass('/contact')">
                         <a href="#/contact">Contact</a>
                     </li>
                 </ul>
